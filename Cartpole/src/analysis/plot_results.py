@@ -31,11 +31,13 @@ def load_all_experiments(indir):
             "discret": None
         }
 
-        # Detectar discretización tipo "A_5000" o "A_coarse"
+        # Detectar discretización tipo "A_5000", "A_coarse" o "A_fine"
         if folder.startswith("A_5000"):
             exp["discret"] = "A_5000"
         elif folder.startswith("A_coarse"):
             exp["discret"] = "A_coarse"
+        elif folder.startswith("A_fine"):
+            exp["discret"] = "A_fine"
 
         for part in parts:
             if part.startswith("alpha"):

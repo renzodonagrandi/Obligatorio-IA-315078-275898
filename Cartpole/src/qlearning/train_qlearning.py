@@ -87,7 +87,7 @@ def run_training(env, discretizer, bins, alpha, gamma, epsilon_start, epsilon_mi
 
 def parse_args():
     p = argparse.ArgumentParser()
-    p.add_argument("--discret", choices=["A_coarse","A_5000"], required=True)
+    p.add_argument("--discret", choices=["A_coarse","A_5000","A_fine"], required=True)
     p.add_argument("--alpha", type=float, default=0.05)
     p.add_argument("--gamma", type=float, default=0.99)
     p.add_argument("--epsilon_start", type=float, default=1.0)
@@ -108,6 +108,7 @@ if __name__ == "__main__":
     bins_map = {
         "A_coarse": [3,3,6,3],      # 162 states — if tenés otra A_coarse, ajustar
         "A_5000":  [7,7,15,7],      # ≈5,145 estados
+        "A_fine":  [10,10,10,10],   # 10,000 estados (fina)
     }
 
     if args.discret not in discretizers:
