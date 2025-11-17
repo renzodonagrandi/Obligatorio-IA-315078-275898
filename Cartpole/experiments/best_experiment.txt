@@ -1,0 +1,6 @@
+Best Experiment Found:
+Folder: A_5000_alpha0.05_gamma0.99_decay0.995_ep5000_seed0
+Alpha: 0.05
+Gamma: 0.99
+Epsilon Decay: 0.995
+Best Moving Avg Reward: 284.9
